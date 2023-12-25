@@ -6,7 +6,7 @@
     "empleados": {
       "projectType": "application",
       "schematics": {},
-      "root": "app",
+      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
