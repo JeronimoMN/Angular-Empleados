@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-empleados',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-empleados.component.css']
 })
 export class ListEmpleadosComponent {
+  
+  constructor() {}
 
 }

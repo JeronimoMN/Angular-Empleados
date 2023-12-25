@@ -3,9 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
+import {provideFirestore, getFirestore} from '@angular/fire/firestore';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment.development';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
 import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +21,10 @@ import { CreateEmpleadoComponent } from './components/create-empleado/create-emp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(()=> initializeApp(environment.firebase)),
+    provideFirestore(()=> getFirestore()),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
