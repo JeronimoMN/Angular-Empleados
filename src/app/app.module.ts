@@ -10,6 +10,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
 import { CreateEmpleadoComponent } from './components/create-empleado/create-empleado.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     provideFirebaseApp(()=> initializeApp(environment.firebase)),
     provideFirestore(()=> getFirestore()),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

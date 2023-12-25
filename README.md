@@ -26,6 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-##Objetivo
+## Objetivo del Proyecto
 
-Este proyecto tiene una conexion con una base de datos (Firebase) la cual permite hacer un CRUD basico. 
+La idea de este proyecto es hacer una conexion de un proyecto angular con una base de datos remota, en este caso `Firebase`. Se puede crear, eliminar, actualizar y en la misma interfaz, consultar los datos que son buscados. 
+    - CRUD
+    - Angular
+    - Firebase
